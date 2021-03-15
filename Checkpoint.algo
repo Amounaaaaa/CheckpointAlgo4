@@ -1,0 +1,18 @@
+ALGORITHM Insertion_sort 
+VAR
+    
+  i:INTEGER=0;
+  j:INTEGER=0;
+  current:INTEGER;
+  tab : ARRAY_OF INTEGER[10];
+BEGIN
+    FOR j FROM 1 TO tab.length DO
+        current:=tab[j];
+        i:=j-1;
+        WHILE ((i>-1)&&(tab[i]>current)) DO
+            tab[i+1]=tab[i];
+            i:=i-1;
+        END_WHILE
+        tab[i+1]=current;
+    END_FOR
+END
